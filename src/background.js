@@ -23,3 +23,13 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       break;
   }
 });
+
+chrome.runtime.onInstalled.addListener((details) => {
+  if (details.reason.search(/install/g) === -1) {
+    return;
+  }
+  chrome.tabs.create({
+    url: 'https://github.com/enyuka/twilio_account_switcher/blob/master/README.md',
+    active: true,
+  });
+});
