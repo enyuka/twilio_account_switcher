@@ -29,7 +29,7 @@ chrome.runtime.onInstalled.addListener((details) => {
     return;
   }
   chrome.tabs.create({
-    url: 'https://github.com/enyuka/twilio_account_switcher/blob/master/README.md',
+    url: 'https://github.com/enyuka/twilio_account_switcher/blob/master/HOWTOUSE.md',
     active: true,
   });
 });
